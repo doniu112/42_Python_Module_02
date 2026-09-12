@@ -7,13 +7,16 @@ def input_temperature(temp_str: str) -> int:
     else:
         return temperature
 
+
 def test_temperature(testing_value):
     try:
         temperature = input_temperature(testing_value)
         return f"Temperature is now {temperature}°C"
     except ValueError:
-        return f"Caught input_temperature error: invalid literal for int() with base 10: '{testing_value}'"
-
+        return (
+                f"Caught input_temperature error: invalid "
+                f"literal for int() with base 10: '{testing_value}'"
+        )
 
 
 if __name__ == '__main__':
