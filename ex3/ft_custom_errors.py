@@ -5,12 +5,12 @@ class GardenError(Exception):
 
 class PlantError(GardenError):
 	def __init__(self, message: str = "Unknown plant error") -> None:
-		super().__init__(message)
+		GardenError.__init__(self, message)
 
 
 class WaterError(GardenError):
 	def __init__(self, message: str = "Unknown water error") -> None:
-		super().__init__(message)
+		GardenError.__init__(self, message)
 
 
 def check_plant(is_wilting: bool) -> None:

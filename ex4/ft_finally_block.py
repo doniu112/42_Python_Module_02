@@ -5,10 +5,10 @@ class GardenError(Exception):
 
 class PlantError(GardenError):
     def __init__(self, message: str = "Unknown plant error") -> None:
-        super().__init__(message)
+        GardenError.__init__(self, message)
 
 
-def water_plant(plant_name):
+def water_plant(plant_name: str) -> None:
     if plant_name != plant_name.capitalize():
         raise PlantError(f"Invalid plant name to water: '{plant_name}'")
     print(f"Watering {plant_name}: [OK]")
