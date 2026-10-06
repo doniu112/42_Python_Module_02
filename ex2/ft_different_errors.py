@@ -4,7 +4,7 @@ def garden_operations(operation_number: int) -> None:
     elif operation_number == 1:
         10/0
     elif operation_number == 2:
-        open('text.txt')
+        open('/non/existent/file')
     elif operation_number == 3:
         'something' + 1
     else:
